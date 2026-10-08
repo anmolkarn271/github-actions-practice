@@ -1,4 +1,4 @@
-name: Hello Github Action
+name: Hello GitHub Actions
 
 on:
   workflow_dispatch:
@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: say hello
-      run: echo "hello from github action"
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
