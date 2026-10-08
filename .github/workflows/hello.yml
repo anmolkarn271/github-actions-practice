@@ -10,3 +10,6 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello from GitHub Actions!"
+
+      - name: Test Success
+        run: echo "CI pipeline is working!"
