@@ -2,6 +2,8 @@ name: Hello GitHub Actions
 
 on:
   push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   hello:
@@ -10,6 +12,9 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello from GitHub Actions!"
+
+      - name: Show Git Version
+        run: git --version
 
       - name: Test Success
         run: echo "CI pipeline is working!"
