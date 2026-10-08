@@ -1,4 +1,4 @@
-name: Hello GitHub Actions
+name: CI Practice
 
 on:
   push:
@@ -6,15 +6,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello:
+
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: Build Step
+        run: echo "Building application..."
 
-      - name: Show Git Version
-        run: git --version
+      - name: Show Node Version
+        run: node --version
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Step
+        run: echo "Running tests..."
 
       - name: Test Success
-        run: echo "CI pipeline is working!"
+        run: echo "All tests passed!"
